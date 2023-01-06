@@ -25,6 +25,11 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log('In APP.JS');
+    console.log(expense);
+  };
+
   // Same as below previously react used to be used like this, before there was JSX. JSX works like this behind the scenes (under the hood).
   // return React.createElement('div', {}, React.createElement('h2', {}, `Let's get started!`), React.createElement(Expenses, { items: expenses }));
 
@@ -32,7 +37,7 @@ function App() {
   // custom component starts with a capital letter
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
