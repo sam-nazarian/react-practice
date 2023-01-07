@@ -30,6 +30,7 @@ function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
+    //When a toop component changes then all of the children also change
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
